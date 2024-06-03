@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: xmfyqwr2u-python-gitops
+  description: This is GitOps manifest for xmfyqwr2u-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: xmfyqwr2u-python
+    janus-idp.io/tekton: xmfyqwr2u-python 
+    backstage.io/kubernetes-id: xmfyqwr2u-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:xmfyqwr2u-python
